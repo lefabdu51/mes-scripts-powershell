@@ -12,10 +12,10 @@ ce script permet l'installation de chocolatey sur la machine ou il est éxécut�
 La commande choco est disponible suite à l'utilisation de ce script.
 Ce script doit être lancé avec des droits administratifs.
 
-#le script elevation_privilege
+# le script elevation_privilege
 Ce script doit être copié au début d'un script devant être lancé avec des droits administrateur.
 Il permet une élévation de privilèges et l' execution des commandes qui suivent celui ci.
 
-#le script clef_windows
+# le script clef_windows
 Ce script permet de récuperer la clef produit windows de la machine ou il est installé. Très utile si l'étiquette bleu ou verte 
 est usée ou absente. Fonctionne sous Windows 10. 
