@@ -1,6 +1,6 @@
-﻿If Wscript.Arguments.Count = 0 Then
+﻿If (Wscript.Arguments.Count = 0) Then
 strComputer = inputbox("Entrez le nom de l ordinateur dont vous voulez la clé","Nom de l ordinateur")
-if strComputer = "" then wscript.quit
+if (strComputer = "") then wscript.quit
 Else
 strComputer = Wscript.Arguments.Item(0)
 End If
@@ -18,7 +18,7 @@ StartOffset = 52 : EndOffset =67
 For i = StartOffset to EndOffset
 HexDigitalPID (i-StartOffset) = HexBuf(i)
 next
-' Convertit la clé produit codée en clé d activation
+# Convertit la clé produit codée en clé d activation
 dLen = 29 : sLen = 15
 KEYSTRING =""
 for i=dLen-1 to 0 step -1
