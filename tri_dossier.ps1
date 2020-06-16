@@ -1,4 +1,10 @@
 ﻿$chemin = read-host "Tri du bureau = 1, ou entrez le chemin du dossier à trier "
+$recurse = read-host "recherche recursive = 1"
+If ($chemin -eq 1) {
+$files = Get-ChildItem -Path $pathToUse -Recurse
+} else {
+$files = Get-ChildItem -Path $pathToUse 
+}
 If ($chemin -eq 1) {
 If ((Test-Path -path "c:\Users"))
 {
@@ -89,7 +95,7 @@ $comics = @(
 $liens = @(
 'lnk'
 )
-$files = Get-ChildItem -Path $pathToUse 
+# $files = Get-ChildItem -Path $pathToUse 
 Foreach ($x in $files){
 if($docs.Contains($x.Extension.TrimStart('.').ToLower())){
 New-Item -ItemType Directory -Path $pathToUse -Name "Documents" -ErrorAction Ignore

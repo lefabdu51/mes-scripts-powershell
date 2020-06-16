@@ -35,3 +35,4 @@ Les variables sont en debut de script et à modifier.
 
 # Le script tri_dossier
 Ce script permet de trier un répèrtoire. On peut choisir entre entrer le chemin du dossier et entrer 1 pour trier le bureau.
+Le tri se fait en fonction de l'extension des fichiers.
