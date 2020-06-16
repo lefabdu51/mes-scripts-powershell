@@ -7,9 +7,11 @@ Write-Host "Liste des utilitaires: entrez le nom d'un utilitaire pour le lancer"
 out-host -InputObject  $liste
 $liste | Out-GridView  | ForEach-Object { $_.FullName }
 
+
 # -NoEnumerate
 # write-output -InputObject $SubFolders
 # write-output -InputObject $liste4
 # write-host $liste
 # $service = Read-Host -Prompt "entrez  le nom du service à depanner: " 
 # Get-TroubleshootingPack -Path "C:\Windows\Diagnostics\System\Audio" | Invoke-TroubleshootingPack
+# Autre commande à lancer après ou faire une boucle de choix : perfmon le moniteur de performance
