@@ -42,6 +42,13 @@ Ce script affiche les groupes locaux auquel est associé l'utilisateur dont le n
 Deux type de sorties sont disponible: la propriété Name de l'objet localgroup, ou un affichage via write-output, qui 
 affiche les groupes et leur description.
 Ce script peut être intégré dans un autre script et travailler avec des variables et des groupes distant.
+
 # le script selection_fichiers_dossier
 Ce script permet de selectionner un fichier dans une arborescence de fichier. Chaque fichier est listé avec un numéro. 
 En entrant ce numéro, on récuperes le nom de fichier dans une variable, qui peut être réutilisée après.
+
+# le script espace_disque_restant
+Ce script calcule l'espace disque restant sur un lecteur au sens Windows du terme. Il peut s'agir d'un disque ou une partition.
+La commande send-MailMessage doit être personnalisée pour que l'email parte.
+Ce scipt peut être lançé cycliquement via une tâche planifiée pour surveiller un disque ou un ensemble de disques précis (en dupliquant la ligne 3 à 7 et en fixant 
+la valeur de $d directement dans le script. Dans le script actuel, il s'agit d'une entrée utilisateur.
