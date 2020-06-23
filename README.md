@@ -50,5 +50,6 @@ En entrant ce numéro, on récuperes le nom de fichier dans une variable, qui pe
 # le script espace_disque_restant
 Ce script calcule l'espace disque restant sur un lecteur au sens Windows du terme. Il peut s'agir d'un disque ou une partition.
 La commande send-MailMessage doit être personnalisée pour que l'email parte.
+La commande write-host juste au dessus du dernier bloc de commentaires est la pour afficher le résultat du script. 
 Ce scipt peut être lançé cycliquement via une tâche planifiée pour surveiller un disque ou un ensemble de disques précis (en dupliquant la ligne 3 à 7 et en fixant 
 la valeur de $d directement dans le script. Dans le script actuel, il s'agit d'une entrée utilisateur.

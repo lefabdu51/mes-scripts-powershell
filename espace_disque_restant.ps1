@@ -7,5 +7,5 @@ $freeGB = [math]::Round($freeGB,2)
 # Ajouter smtp et credentials d'un compte windows à la fonction ci dessous pour envoyer le mail
 # Voir get-help Send-MailMessage -examples pour la configuration
 # Ce script peut être lancé via une tache planifiée pour surveiller l'espace disque disponible sur un système de fichiers.
-# Send-MailMessage -From "user@domaine.fr" -To "admin@domaine.fr" -Subject "Espace disque restant" -Body "test email: Espace disque restant sur le disque :  + $freeGB +  GB" -SmtpServer "smtp.gmail.com"  -Credential domain01\admin01 -UseSsl
+# Send-MailMessage -From "user@domaine.fr" -To "admin@domaine.fr" -Subject "Espace disque restant" -Body "test email: Espace disque restant sur le disque :  + $freeGB +  GB" -SmtpServer "smtp.domaine.fr"  -Credential domain01\admin01 -UseSsl
     
