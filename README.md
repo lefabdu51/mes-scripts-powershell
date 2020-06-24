@@ -36,7 +36,8 @@ Les variables sont en debut de script et à modifier.
 
 # Le script tri_dossier
 Ce script permet de trier un répèrtoire. On peut choisir entre entrer le chemin du dossier et entrer 1 pour trier le bureau.
-Le tri se fait en fonction de l'extension des fichiers.
+Le tri se fait en fonction de l'extension des fichiers. Chaque dossier regroupe les fichiers de type et d'extensions commune.
+Le script peut être étendu et modifier facilement. 
 
 # le script affichage_groupe_utilisateur
 Ce script affiche les groupes locaux auquel est associé l'utilisateur dont le nom est entré.
@@ -47,6 +48,8 @@ Ce script peut être intégré dans un autre script et travailler avec des varia
 # le script selection_fichiers_dossier
 Ce script permet de selectionner un fichier dans une arborescence de fichier. Chaque fichier est listé avec un numéro. 
 En entrant ce numéro, on récuperes le nom de fichier dans une variable, qui peut être réutilisée après.
+Ce script est un exemple permettant de créer un menu avec une liste d'éléments numérotés.
+Il est à utilisée comme fonction dans d'autres scripts qui ont ce besoin
 
 # le script espace_disque_restant
 Ce script calcule l'espace disque restant sur un lecteur au sens Windows du terme. Il peut s'agir d'un disque ou une partition.
@@ -58,3 +61,10 @@ la valeur de $d directement dans le script. Dans le script actuel, il s'agit d'u
 # le script trouvers_fichiers_dupliques
 Ce script permet de trouver les fichiers dupliqués dans une arborescence de fichiers ou un réprtoire unique
 La sortie se fait soit dans un fichier texte, soit à l'écran.
+
+# le script Synhese_vocale
+Ce script est un exemple d'utilisation de la synthèse vocale disponible avec Cortana sous Powershell.
+Je me sert de la synthèse vocale pour les scripts devant être utilisés par des personnes ayant desinfirmités
+visuelles ou auditive.
+
+# le script

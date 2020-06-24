@@ -1,4 +1,5 @@
-﻿Add-Type -AssemblyName System.speech
+﻿# exemple de fonction
+Add-Type -AssemblyName System.speech
 $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer
 $speak.Speak("Entrez votre nom")
 $a = read-host "Entrez votre nom"

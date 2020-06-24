@@ -1,4 +1,5 @@
-﻿If ((Test-Path -path "c:\Users"))
+﻿# fonction exemple
+If ((Test-Path -path "c:\Users"))
 {
  $local = 'c:\Users'
  } else {
