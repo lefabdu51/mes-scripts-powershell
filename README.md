@@ -27,7 +27,8 @@ Ce script agit sur une clef de la base de registre.
 
 # le script utilitaires-depannage-windows
 Ce script permet de lancer les differents utilitaires de résolution de problèmes intégrés à Windows. Les noms des utilitaires
-doivent réspecter la même casse qu'indiquée dans le menu.
+doivent réspecter la même casse qu'indiquée dans la liste. Cette liste peut varier selon la version de Windows sur laquelle
+ce script est lancé.
 
 # le script scan_ports
 Ce script est un scanner de ports. Il est basique, mais utile si on a pas nmap sous la main.
