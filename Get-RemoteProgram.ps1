@@ -288,3 +288,4 @@ Will retrieve list of programs from the local system, while also retrieving Micr
         }
     }
 }
+Get-RemoteProgram 

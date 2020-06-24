@@ -21,16 +21,14 @@ $pathToUse = "$local\$env:username\Desktop"
 } else {
 $pathToUse = $chemin
 }
-# ecriture chemin utilisé
-# write-output $pathToUse
-# $pathToUse = "$local\$env:username\Bureau"
+# On crées des tableaux le nom des tableaux est le nom du dossier ou sont stocjés les fichiers correspondant aux extensions.
 $video = @(
 '3g2','3gp','3gpp','asf','avi','divx','f4v',
 'flv','h264','ifo','m2ts','m4v','mkv','mod','mov',
 'mp4','mpeg','mpg','mswmm','mts','mxf','ogv','rm',
 'srt','swf','ts','vep','vob','webm','wlmp','wmv'
 )
-$spreadsheets = @(
+$feuilles_calcul = @(
 'csv','ods','xls','xlsx'
 )
 $images = @(
@@ -43,8 +41,8 @@ $presentations = @(
 'key','odp','pps','ppsx''ppt','pptm','pptx'
 )
 $docs = @(
-'chm','doc','docm','docx','dot','dotx','eml','eps',
-'hwp','odt','pages','pdf','pub','rtf',
+'doc','docm','docx','dot','dotx','eml','eps',
+'hwp','odt','pages','pub','rtf',
 'sxw','wpd',' wps','xml','xps'
 )
 $cadFiles = @(
@@ -94,6 +92,15 @@ $comics = @(
 )
 $liens = @(
 'lnk'
+)
+$pdf = @(
+'pdf'
+)
+$aide = @(
+'chm','hlp'
+)
+$isos = @(
+'iso','img','wim','dmg','bin','cue','vcd','nrg'
 )
 # $files = Get-ChildItem -Path $pathToUse 
 Foreach ($x in $files){
@@ -172,6 +179,18 @@ Move-Item -Path $x.FullName -Destination $pathToUse/"Comics"
 elseif($liens.Contains($x.Extension.TrimStart('.').ToLower())){
 New-Item -ItemType Directory -Path $pathToUse -Name "Liens" -ErrorAction Ignore
 Move-Item -Path $x.FullName -Destination $pathToUse/"Liens"
+}
+elseif($pdf.Contains($x.Extension.TrimStart('.').ToLower())){
+New-Item -ItemType Directory -Path $pathToUse -Name "PDF" -ErrorAction Ignore
+Move-Item -Path $x.FullName -Destination $pathToUse/"PDF"
+}
+elseif($aide.Contains($x.Extension.TrimStart('.').ToLower())){
+New-Item -ItemType Directory -Path $pathToUse -Name "Aide" -ErrorAction Ignore
+Move-Item -Path $x.FullName -Destination $pathToUse/"Aide"
+}
+elseif($isos.Contains($x.Extension.TrimStart('.').ToLower())){
+New-Item -ItemType Directory -Path $pathToUse -Name "ISOS" -ErrorAction Ignore
+Move-Item -Path $x.FullName -Destination $pathToUse/"ISOS"
 }
 elseif($x.Directory){
 New-Item -ItemType Directory -Path $pathToUse -Name "Autres - Divers" -ErrorAction Ignore
