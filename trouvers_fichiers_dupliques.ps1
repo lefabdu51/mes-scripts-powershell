@@ -6,9 +6,18 @@ $Input | ForEach-Object {
   $lookup.Add($_.Name, $_.FullName)  
   } 
   }  
- }
- 
+ } 
+$requete = Read-Host " Racine de la recherche "
+$demande = read-Host " sortie fichier = 1, sortie ecran = 0"
  $lookup = @{}
-Get-ChildItem $home | Find-DuplicateName 
-Get-ChildItem $env:windir | Find-DuplicateName 
-Get-ChildItem $env:windir\system32 | Find-DuplicateName
+ if ($demande -eq 0) 
+ {
+Get-ChildItem $requete -Recurse | Find-DuplicateName
+ } elseif ($demande -eq 1) {
+$sortie = Read-Host "Fichier de sortie"
+Get-ChildItem $requete -Recurse | Find-DuplicateName >> $sortie 
+} else {
+write-host " réponse invalide "
+}
+# affichage de la liste à l'écran
+# get-content $sortie | out-host -Paging
