@@ -1,5 +1,4 @@
 ﻿#Ici on écrit dans un fichier la liste des fichiers ainsi que le chemin du répertoire qui le contient
-#Lien vers le fichier : cliquez ici
 $RepertorieaTraiter = "D:\txt"
 $currentScriptName = $MyInvocation.MyCommand.Name
 #Récupération du nom du script en cours

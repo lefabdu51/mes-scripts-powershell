@@ -2,7 +2,9 @@
 $net = "127.0.0"
 $range = 1..20
 $timeout_ms = 5
- 
+# en une ligne
+# get-nettcpconnection | select local*,remote*,state,@{Name="Process";Expression={(Get-Process -Id $_.OwningProcess).ProcessName}} | sort-object -property LocalPort
+
 foreach ($r in $range)
 {
     Get-Date

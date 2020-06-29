@@ -1,8 +1,10 @@
 ﻿# Permet d'écrire une liste des dossiers et fichier d'une arborescence
 # dans un fichier csv norme excel
 # les inscriptions write-host et get-content ne sont la que pour vérification du fichier et de son contenu 
-$StartFolder = "D:\"
-$Output = "d:\test-d.csv"
+#$StartFolder = "D:\"
+#$Output = "d:\test-d.csv"
+$StartFolder = Read-Host "Repertoire à lister :"
+$Output = Read-Host "emplacement du fichier csv :"
 $fso = New-Object -COM 'Scripting.FileSystemObject'
 
 $folders = @($StartFolder)
