@@ -5,6 +5,7 @@ $files = Get-ChildItem -Path $pathToUse -Recurse
 } else {
 $files = Get-ChildItem -Path $pathToUse 
 }
+# on teste le chemin pour savoir si les chemins sont en anglais ou en français
 If ($chemin -eq 1) {
 If ((Test-Path -path "c:\Users"))
 {
