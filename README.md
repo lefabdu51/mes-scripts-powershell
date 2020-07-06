@@ -77,7 +77,7 @@ La sortie se fait soit dans un fichier texte, soit à l'écran.
 
 ## le script Synthese_vocale
 Ce script est un exemple d'utilisation de la synthèse vocale disponible avec Cortana sous Powershell.
-Je me sert de la synthèse vocale pour les scripts devant être utilisés par des personnes ayant desinfirmités
+Je me sert de la synthèse vocale pour les scripts devant être utilisés par des personnes ayant des infirmités
 visuelles ou auditive.
 
 ## le script Sinstall_pgp
