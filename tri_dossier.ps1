@@ -22,7 +22,7 @@ $pathToUse = "$local\$env:username\Desktop"
 } else {
 $pathToUse = $chemin
 }
-# On crées des tableaux le nom des tableaux est le nom du dossier ou sont stocjés les fichiers correspondant aux extensions.
+# On crées des tableaux le nom des tableaux est le nom du dossier ou sont stockés les fichiers correspondant aux extensions.
 $video = @(
 '3g2','3gp','3gpp','asf','avi','divx','f4v',
 'flv','h264','ifo','m2ts','m4v','mkv','mod','mov',
@@ -47,7 +47,7 @@ $docs = @(
 'sxw','wpd',' wps','xml','xps'
 )
 $cadFiles = @(
-'dwg','dxf'
+'dwg','dxf','cxf'
 )
 $misc = @(
 'bin','cda','dat','dll','isc',

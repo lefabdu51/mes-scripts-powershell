@@ -3,8 +3,13 @@
 function install_gpg {
 $uri = 'https://raw.githubusercontent.com/adbertram/Random-PowerShell-Work/master/Security/GnuPg.psm1'
 $moduleFolderPath = 'C:\Program Files\WindowsPowerShell\Modules\GnuPg'
+if (-Not(test-path -LiteralPath $moduleFolderPath))
+{
 $null = New-Item -Path $moduleFolderPath -Type Directory
 Invoke-WebRequest -Uri $uri -OutFile (Join-Path -Path $moduleFolderPath -ChildPath 'GnuPg.psm1')
+} else {
+write-host "module déja installé. Rien à faire"
+}
 }
 # on affiches les commandes disponibles
 function affichage_cmd {
@@ -33,3 +38,5 @@ get-command -Module gnupg
 # Remove-Encryption -FolderPath C:\ImportantFiles\ -Password secret
 # Si plusieurs fichiers à décrypter utiliser la commande ci dessous
 # Get-ChildItem -Path '\\NDH2CPRW2FSR001\ftp\Tallahassee\Hold\*gpg' | ForEach-Object -Process {Remove-Encryption -FolderPath $PSItem.FullName -Password secret}
+install_gpg
+affichage_cmd
