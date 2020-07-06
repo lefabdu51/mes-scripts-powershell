@@ -75,9 +75,13 @@ Une fonction de notification par email est ajoutée en fin de script.
 Ce script permet de trouver les fichiers dupliqués dans une arborescence de fichiers ou un réprtoire unique
 La sortie se fait soit dans un fichier texte, soit à l'écran.
 
-## le script Synhese_vocale
+## le script Synthese_vocale
 Ce script est un exemple d'utilisation de la synthèse vocale disponible avec Cortana sous Powershell.
 Je me sert de la synthèse vocale pour les scripts devant être utilisés par des personnes ayant desinfirmités
 visuelles ou auditive.
 
-## le script
+## le script Sinstall_pgp
+
+Ce script permet l'installation d'un module powershell permettant l'ajout de deux cmdlets concernant le cryptage de fichiers
+via PGP (Pretty Good Privacy). Si le module est déjà installé, alors rien ne se passe.
+Les cmdlets ajoutés sont add-encryption et remove-encryption.
